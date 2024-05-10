@@ -1,7 +1,11 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/flutter_svg.dart';
 
-const lightTeal = Color.fromRGBO(15, 147, 122, 0.8);
+const deepTeal = Color.fromRGBO(15, 147, 122, 0.8);
+const deePurple = Color.fromRGBO(53, 9, 31, 0.94);
+const white = Color.fromRGBO(255, 255, 255, 0.94);
+
+
 
 SvgPicture ScreenBackground(context) {
   return SvgPicture.asset(
@@ -13,10 +17,10 @@ SvgPicture ScreenBackground(context) {
   );
 }
 
-TextStyle HeadText1(textColor) {
+TextStyle HeadText1(textColor, size) {
   return TextStyle(
     fontFamily: "poppins",
-    fontSize: 20, // Adjust font size as needed
+    fontSize: size, // Adjust font size as needed
     fontWeight: FontWeight.bold, // Adjust font weight as needed
     color: textColor,
   );
@@ -47,5 +51,30 @@ InputDecoration passwordField(label, showPass) {
       borderSide: BorderSide(color: Colors.grey.shade200, width: 0.0),
     ),
     suffixIcon: showPass,
+  );
+}
+
+ButtonStyle button(){
+
+  return ElevatedButton.styleFrom(
+      shape: RoundedRectangleBorder(
+        borderRadius: BorderRadius.circular(5.0),
+      ),
+      minimumSize: const Size(100, 40),
+      backgroundColor: Colors.teal
+  );
+}
+
+
+InkWell forgotPass(){
+
+  return InkWell(
+    onTap: () {
+
+    },
+    child: const Text(
+      'Forgot Password?',
+      style: TextStyle(color: Colors.grey),
+    ),
   );
 }

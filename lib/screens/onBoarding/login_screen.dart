@@ -37,7 +37,7 @@ class _LoginScreenState extends State<LoginScreen> {
                   ),
                   Padding(
                     padding: const EdgeInsets.only(right: 200.0),
-                    child: Text("Get started", style: HeadText1(lightTeal)),
+                    child: Text("Get started", style: HeadText1(deepTeal, 20)),
                   ),
                   const SizedBox(
                     height: 8,
@@ -68,8 +68,52 @@ class _LoginScreenState extends State<LoginScreen> {
                           },
                         ),
                       )),
+                  const SizedBox(
+                    height: 16,
+                  ),
+                  Row(
+                    children: [
+
+                      ElevatedButton.icon(
+
+                        style: button(),
+                        onPressed: () {},
+                        icon: const Icon(Icons.login_rounded, color: Colors.white),
+
+                        label:  Text("Sign In", style: HeadText1(white, 15)),
+
+
+
+                      ),
+
+                      Padding(
+                        padding: const EdgeInsets.symmetric(horizontal: 20.0),
+                        child: forgotPass(),
+                      ),
+                    ],
+                  ),
+
+                  const SizedBox(height: 30,),
+
+                  Row(
+                    mainAxisAlignment: MainAxisAlignment.center,
+                    children: [
+                      const Text(
+                        "Don't have an account?",
+                        style: TextStyle(
+                            fontWeight: FontWeight.w500, letterSpacing: 0.5),
+                      ),
+                      TextButton(
+                          onPressed: () {},
+
+                          child: const Text('Sign up')),
+                    ],
+                  )
+
+
                 ],
-              )),
+              )
+          ),
         ],
       ),
     );
