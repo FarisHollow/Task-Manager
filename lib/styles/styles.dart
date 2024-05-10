@@ -5,9 +5,9 @@ SvgPicture ScreenBackground(context){
 
   return SvgPicture.asset("assets/images/background.svg",
 
-    width: MediaQuery.of(context).size.width,
-    height: MediaQuery.of(context).size.height,
-    fit: BoxFit.fill,
+    width: double.infinity,
+    height: double.infinity,
+    fit: BoxFit.cover,
     alignment: Alignment.center,
   );
 
