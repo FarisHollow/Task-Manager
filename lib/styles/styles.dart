@@ -54,13 +54,13 @@ InputDecoration passwordField(label, showPass) {
   );
 }
 
-ButtonStyle button(){
+ButtonStyle button(size){
 
   return ElevatedButton.styleFrom(
       shape: RoundedRectangleBorder(
         borderRadius: BorderRadius.circular(5.0),
       ),
-      minimumSize: const Size(100, 40),
+      minimumSize: size,
       backgroundColor: Colors.teal
   );
 }

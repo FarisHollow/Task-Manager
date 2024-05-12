@@ -1,6 +1,9 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/svg.dart';
+import 'package:get/get.dart';
+import 'package:task_manager/screens/onBoarding/registration_screen.dart';
 import 'package:task_manager/styles/styles.dart';
+
 
 class LoginScreen extends StatefulWidget {
   const LoginScreen({super.key});
@@ -47,7 +50,7 @@ class _LoginScreenState extends State<LoginScreen> {
                       style: const TextStyle(
                         fontSize: 18,
                       ),
-                      decoration: textField("Enter your name", "John Doe")),
+                      decoration: textField("Enter your email", "example@gmail.com")),
                   const SizedBox(
                     height: 8,
                   ),
@@ -73,28 +76,22 @@ class _LoginScreenState extends State<LoginScreen> {
                   ),
                   Row(
                     children: [
-
                       ElevatedButton.icon(
-
-                        style: button(),
+                        style: button(const Size(100, 40),),
                         onPressed: () {},
-                        icon: const Icon(Icons.login_rounded, color: Colors.white),
-
-                        label:  Text("Sign In", style: HeadText1(white, 15)),
-
-
-
+                        icon: const Icon(Icons.login_rounded,
+                            color: Colors.white),
+                        label: Text("Sign In", style: HeadText1(white, 15)),
                       ),
-
                       Padding(
                         padding: const EdgeInsets.symmetric(horizontal: 20.0),
                         child: forgotPass(),
                       ),
                     ],
                   ),
-
-                  const SizedBox(height: 30,),
-
+                  const SizedBox(
+                    height: 30,
+                  ),
                   Row(
                     mainAxisAlignment: MainAxisAlignment.center,
                     children: [
@@ -104,16 +101,11 @@ class _LoginScreenState extends State<LoginScreen> {
                             fontWeight: FontWeight.w500, letterSpacing: 0.5),
                       ),
                       TextButton(
-                          onPressed: () {},
-
-                          child: const Text('Sign up')),
+                          onPressed: () { Get.to(const RegistrationScreen());}, child: const Text('Sign up')),
                     ],
                   )
-
-
                 ],
-              )
-          ),
+              )),
         ],
       ),
     );

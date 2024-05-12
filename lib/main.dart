@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:get/get.dart';
 import 'package:task_manager/screens/onBoarding/email_verification_screen.dart';
 import 'package:task_manager/screens/onBoarding/login_screen.dart';
 import 'package:task_manager/screens/onBoarding/pin_verification_screen.dart';
@@ -16,7 +17,7 @@ class MyApp extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return MaterialApp(
+    return GetMaterialApp(
       title: 'Task Manager',
       debugShowCheckedModeBanner: false,
       initialRoute: '/login',
