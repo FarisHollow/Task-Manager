@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/svg.dart';
 import 'package:get/get.dart';
+import 'package:task_manager/screens/onBoarding/email_verification_screen.dart';
 import 'package:task_manager/screens/onBoarding/registration_screen.dart';
 import 'package:task_manager/styles/styles.dart';
 

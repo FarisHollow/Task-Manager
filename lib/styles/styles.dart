@@ -1,9 +1,12 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/flutter_svg.dart';
+import 'package:get/get.dart';
+import 'package:task_manager/screens/onBoarding/email_verification_screen.dart';
 
 const deepTeal = Color.fromRGBO(15, 147, 122, 0.8);
 const deePurple = Color.fromRGBO(53, 9, 31, 0.94);
 const white = Color.fromRGBO(255, 255, 255, 0.94);
+const deepGreen = Color.fromRGBO(3, 183, 87, 0.94);
 
 
 
@@ -70,6 +73,9 @@ InkWell forgotPass(){
 
   return InkWell(
     onTap: () {
+
+      Get.to(const EmailVerificationScreen());
+
 
     },
     child: const Text(
