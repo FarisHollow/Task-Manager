@@ -78,9 +78,10 @@ class _EmailVerificationScreenState extends State<EmailVerificationScreen> {
                           onPressed: () {
                             if(!_formKey.currentState!.validate()){
 
-                              Get.to(const PinVerificationScreen());
+
                               return;
                             }
+                            Get.to(const PinVerificationScreen());
                             // Start sign-up process
                             // Set _signUpInProgress to true
                           },

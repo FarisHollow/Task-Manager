@@ -1,7 +1,9 @@
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 import 'package:pin_code_fields/pin_code_fields.dart';
+import 'package:task_manager/screens/onBoarding/email_verification_screen.dart';
 import 'package:task_manager/screens/onBoarding/login_screen.dart';
+import 'package:task_manager/screens/onBoarding/set_password_screen.dart';
 import 'package:task_manager/styles/styles.dart';
 
 class PinVerificationScreen extends StatefulWidget {
@@ -29,7 +31,7 @@ class _PinVerificationScreenState extends State<PinVerificationScreen> {
                   crossAxisAlignment: CrossAxisAlignment.center,
                   children: [
                     Padding(
-                      padding: const EdgeInsets.only(right: 105.0),
+                      padding: const EdgeInsets.only(right: 130.0),
                       child: Text("PIN Verification", style: HeadText1(deepTeal, 20)),
                     ),
                     const SizedBox(
@@ -83,6 +85,8 @@ class _PinVerificationScreenState extends State<PinVerificationScreen> {
                           style: button(const Size(328, 40)),
                           onPressed: () {
 
+                            Get.to(const SetPasswordScreen() );
+
                             // Start sign-up process
                             // Set _signUpInProgress to true
                           },
@@ -94,6 +98,22 @@ class _PinVerificationScreenState extends State<PinVerificationScreen> {
                     const SizedBox(
                       height: 30,
                     ),
+                    Row(
+                      mainAxisAlignment: MainAxisAlignment.center,
+                      children: [
+                        const Text(
+                          "Another email?",
+                          style: TextStyle(
+                              fontWeight: FontWeight.w500, letterSpacing: 0.5),
+                        ),
+                        TextButton(
+                            onPressed: () {
+                              Get.to(const EmailVerificationScreen());
+                            },
+                            child: const Text('Send again')),
+                      ],
+                    ),
+
                     Row(
                       mainAxisAlignment: MainAxisAlignment.center,
                       children: [

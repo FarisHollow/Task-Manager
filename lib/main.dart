@@ -20,7 +20,7 @@ class MyApp extends StatelessWidget {
     return GetMaterialApp(
       title: 'Task Manager',
       debugShowCheckedModeBanner: false,
-      initialRoute: '/login',
+      initialRoute: '/',
 
       routes: {
 
