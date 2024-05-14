@@ -2,6 +2,7 @@ import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 import 'package:task_manager/screens/onBoarding/login_screen.dart';
+import 'package:task_manager/screens/onBoarding/pin_verification_screen.dart';
 import 'package:task_manager/styles/styles.dart';
 
 class EmailVerificationScreen extends StatefulWidget {
@@ -76,6 +77,8 @@ class _EmailVerificationScreenState extends State<EmailVerificationScreen> {
                           style: button(const Size(328, 40)),
                           onPressed: () {
                             if(!_formKey.currentState!.validate()){
+
+                              Get.to(const PinVerificationScreen());
                               return;
                             }
                             // Start sign-up process
