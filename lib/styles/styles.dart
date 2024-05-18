@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/flutter_svg.dart';
 import 'package:get/get.dart';
+import 'package:pin_code_fields/pin_code_fields.dart';
 import 'package:task_manager/screens/onBoarding/email_verification_screen.dart';
 
 const deepTeal = Color.fromRGBO(15, 147, 122, 0.8);
@@ -82,5 +83,20 @@ InkWell forgotPass(){
       'Forgot Password?',
       style: TextStyle(color: Colors.grey),
     ),
+  );
+}
+
+PinTheme otpTheme() {
+  return PinTheme(
+    shape: PinCodeFieldShape.circle,
+    borderRadius: BorderRadius.circular(5),
+    fieldHeight: 50,
+    fieldWidth: 40,
+    inactiveFillColor: Colors.white,
+    inactiveColor: Colors.red,
+    activeColor: Colors.white,
+    selectedColor: Colors.green,
+    selectedFillColor: Colors.white,
+    activeFillColor: Colors.white,
   );
 }
